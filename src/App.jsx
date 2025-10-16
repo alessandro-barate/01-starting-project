@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "./components/Header.jsx";
 import CoreConcept from "./components/CoreConcept.jsx";
 import TabButton from "./components/TabButton.jsx";
@@ -5,10 +6,12 @@ import TabButton from "./components/TabButton.jsx";
 import { CORE_CONCEPTS } from "./data.js";
 
 function App() {
+  const [ selectedTopic, setSelectedTopic ] = useState('Please click a button');
 
   function handleClick(selectedButton) {
+    setSelectedTopic(selectedButton);
     // selectedButton -> 'components', 'jsx', 'props', 'state'
-    console.log(selectedButton);
+    console.log(selectedTopic);
   }
 
   return (
@@ -40,7 +43,7 @@ function App() {
             <TabButton onClick={() => handleClick('state')}>State</TabButton>
             {/* La arrow function serve per poter chiamare una funzione che deve passare alcuni argomenti. */}
           </menu>
-
+          {selectedTopic}
         </section>
       </main>
     </div>
