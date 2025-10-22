@@ -28,23 +28,25 @@ export default function Examples() {
     return (
         <Section title="Examples" id="examples">
           <Tabs 
-            buttons={<>
-                {/* First button */}
-                <TabButton isSelected={selectedTopic === 'components'} onClick={() => handleClick('components')}>Components</TabButton>
-                {/* END first button */}
-            
-                {/* Second button */}
-                <TabButton isSelected={selectedTopic === 'jsx'} onClick={() => handleClick('jsx')}>JSX</TabButton>
-                {/* END second button */}
-            
-                {/* Third button */}
-                <TabButton isSelected={selectedTopic === 'props'} onClick={() => handleClick('props')}>Props</TabButton>
-                {/* END third button */}
-                        
-                {/* Fourth button */}
-                <TabButton isSelected={selectedTopic === 'state'} onClick={() => handleClick('state')}>State</TabButton>
-                {/* END fourth button */}
-            </>
+            buttonsContainer="menu"
+            buttons={
+                <>
+                    {/* First button */}
+                    <TabButton isSelected={selectedTopic === 'components'} onClick={() => handleClick('components')}>Components</TabButton>
+                    {/* END first button */}
+                
+                    {/* Second button */}
+                    <TabButton isSelected={selectedTopic === 'jsx'} onClick={() => handleClick('jsx')}>JSX</TabButton>
+                    {/* END second button */}
+                
+                    {/* Third button */}
+                    <TabButton isSelected={selectedTopic === 'props'} onClick={() => handleClick('props')}>Props</TabButton>
+                    {/* END third button */}
+                            
+                    {/* Fourth button */}
+                    <TabButton isSelected={selectedTopic === 'state'} onClick={() => handleClick('state')}>State</TabButton>
+                    {/* END fourth button */}
+                </>
                 
           }>
             {tabContent}
