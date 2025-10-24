@@ -28,7 +28,7 @@ export default function Examples() {
     return (
         <Section title="Examples" id="examples">
           <Tabs 
-            buttonsContainer="menu"
+            // buttonsContainer="menu"  -> questo possiamo toglierlo nel caso assegnassimo un valore di default nella destrutturazione del componente
             buttons={
                 <>
                     {/* First button */}
